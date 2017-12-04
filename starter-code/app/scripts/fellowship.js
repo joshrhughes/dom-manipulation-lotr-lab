@@ -53,6 +53,7 @@ function makeHobbits() {
   // give each hobbit a class of hobbit
 var shire = document.querySelector('article');
 var listOfHobbits = document.createElement("ul");
+listOfHobbits.setAttribute("id", "smallMen");
 console.log(shire);
 //console.log(listOfHobbits);
 for (var i = 0; i <hobbits.length; i++) {
@@ -137,21 +138,21 @@ function leaveTheShire() {
   // select rivendell and shire
   //select all hobits and move them to selected rivendel
 
-  var a = document.querySelectorAll('h1')[1];
-  console.log(a);
 
-  var rivendell = document.querySelectorAll('h1')[1];
-  var shire = document.querySelectorAll('h1')[0];
-  var hobbits = document.getElementsByClassName('hobbit');
-  console.log(rivendell, shire, hobbits);
+  var hobbits = document.getElementById('smallMen');
+  var rivendell = document.querySelectorAll('article')[1];
+  //var elvesDwarvesMen = document.createElement("ul");
+  //var shire = document.querySelectorAll('h1')[0];
+  // var hobbits = document.getElementsByClassName('hobbit');
+  console.log(rivendell, hobbits);
   //rivendell.appendChild();
-  //hobbits.removeChild(hobbits.childNodes);
+  //rivendell.appendChild(elvesDwarvesMen);
+  rivendell.appendChild(hobbits);
 
 
 
-  console.log(rivendell, shire, hobbits);
+  console.log(rivendell, hobbits);
 
-  //couldn't figure it out
 
 }
 
@@ -164,6 +165,7 @@ function forgeTheFellowShip() {
   // after each character is added make an alert that they have joined your party
   var fellowship = document.createElement("div");
   //fellowship.nodeValue = a;
+
 
 }
 forgeTheFellowShip();
